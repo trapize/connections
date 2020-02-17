@@ -1,0 +1,42 @@
+{
+  "name": "@trapize/connections",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "preflight": "npm run build && npm run lint && npm test",
+    "preversion": "npm test && npm run build && npm run lint",
+    "version": "git add -A src",
+    "lint": " tslint -p tsconfig.json",
+    "prepare": "",
+    "prepublishOnly": "npm test && npm run build && npm run lint",
+    "test": "jest",
+    "postversion": "git push && git push --tags",
+    "build": "gulp clean && gulp"
+  },
+  "author": "ztrank",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/jest": "^24.9.0",
+    "@types/mysql": "^2.15.8",
+    "@types/node": "^13.1.8",
+    "gulp": "^4.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.3.0",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "@trapize/core": "^1.0.4",
+    "@trapize/secrets-management": "^1.0.0",
+    "inversify": "^5.0.1",
+    "mysql": "^2.18.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.4"
+  }
+}
