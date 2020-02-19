@@ -3,7 +3,7 @@ import { IConnectionFactory } from './IConnection.Factory';
 import { Pool, createPool } from 'mysql';
 import { IPool } from './IPool';
 import { ConnectionSymbols } from './Connection.Symbols';
-import { ISecretService, SecretSymbols } from '@trapize/secrets-management';
+import { ISecretService, Secrets } from '@trapize/secrets-management';
 import { MySqlPool } from './MySql.Pool';
 import { MySqlException } from './exceptions/MySql.Exception';
 import { Core } from '@trapize/core';
@@ -53,7 +53,7 @@ export class MySqlConnectionFactory implements IConnectionFactory {
      */
     public constructor(
         @inject(Core.Configuration.IAppConfig) private appConfig: IConnectionConfig,
-        @inject(SecretSymbols.ISecretService) private secretService: ISecretService,
+        @inject(Secrets.ISecretService) private secretService: ISecretService,
         @inject(ConnectionSymbols.CreatePool) @optional() createPoolFunction?: (data: any) => Pool
     ) {
         this.createPoolFn = createPoolFunction || createPool;
