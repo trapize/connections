@@ -32,9 +32,9 @@
     "typescript": "^3.7.5"
   },
   "dependencies": {
-    "@trapize/core": "^1.0.4",
+    "@trapize/core": "^1.0.0",
     "@trapize/secrets-management": "^1.0.0",
-    "inversify": "^5.0.1",
+    "inversify": "^5.0.0",
     "mysql": "^2.18.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.4"
