@@ -5,4 +5,5 @@ export * from './MySql.Connection.Factory';
 export * from './exceptions/Connection.Exception';
 export * from './exceptions/MySql.Exception';
 export * from './IConnection.Config';
-export * from './Connection.Symbols';
+import * as Connection from './Connection.Symbols';
+export { Connection }
