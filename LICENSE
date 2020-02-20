@@ -1,31 +1,4 @@
-![](https://github.com/trapize/connections/workflows/Unit%20Tests/badge.svg)
-# Core
-Provides an extensible framework design around ease of use to remove much of the boiler plate code for web APIs.
-
-## Installation
-`npm install --save @trapize/connections`
-
-## Getting Started
-Make sure to include an `ISecretService` in your injection tree, and connection data in your `IAppConfig`
-
-Then simply inject the `IConnectionFactory` into your Repository class and connect.
-
-```javascript
-export class MyRepo {
-    public constructor(@inject(Connections.IConnectionFactory) private connectionFactory: IConnectionFactory) {}
-
-    public get connection(): Observable<IConnection> {
-        return this.connectionFactory.connect('connectionName');
-    }
-}
-```
-
-## Advanced
-Checkout the wiki for advanced usage.
-
-https://github.com/trapize/connections.wiki.git
-
-## MIT
+MIT License
 
 Copyright (c) 2020 ztrank
 
