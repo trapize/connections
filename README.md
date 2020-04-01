@@ -23,7 +23,7 @@ export class MyRepo {
 ## Advanced
 Checkout the wiki for advanced usage.
 
-https://github.com/trapize/connections.wiki.git
+https://github.com/trapize/core/wiki
 
 ## MIT
 
